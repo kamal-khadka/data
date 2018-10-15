@@ -35,3 +35,22 @@ ggplot( data = diamonds ) +
 
 ggplot( data = diamonds ) +
   geom_bar(mapping= aes(x = cut, fill = clarity))
+
+ggplot(data = diamonds, mapping = aes(x = cut, fill = clarity)) +
+  geom_bar(alpha = 1/5, position = "identity")
+
+
+ggplot( data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy), position = "jitter")
+
+
+ggplot( data = mpg, mapping = aes(x = class, y = hwy)) +
+  geom_boxplot()
+
+
+# coord_flip switches the x and y azes. useful if you want horizontal boxplot
+ggplot(data = mpg, mapping = aes(x = class, y = hwy)) + 
+  geom_boxplot() +
+  coord_flip()
+
+
