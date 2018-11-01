@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20183.18.1018.1932                               -->
+<workbook source-build='2018.3.0 (20183.18.1018.1932)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style-theme name='clean' />
+  <datasources>
+    <datasource caption='Sheet1 (VisitorCount)' inline='true' name='excel-direct.42203.832184282408' version='18.1'>
+      <connection class='federated' prefer-ind-semantics='true'>
+        <named-connections>
+          <named-connection caption='Sheet1 (VisitorCount)' name='excel-direct.42203.832184282408leaf'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/1178230/Documents/R/data/tableau/Exercise Files/Chapter08/VisitorCount.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.42203.832184282408leaf' name='Sheet1$' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:A101:no:A1:A101:0' header='yes' outcome='6'>
+            <column datatype='integer' name='CountOfVisitors' ordinal='0' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>CountOfVisitors</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CountOfVisitors]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>CountOfVisitors</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:A101:no:A1:A101:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Count Of Visitors (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[CountOfVisitors]' peg='0' size='7' />
+      </column>
+      <column caption='Count Of Visitors' datatype='integer' name='[CountOfVisitors]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.474811' measure-ordering='alphabetic' measure-percentage='0.525189' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (VisitorCount)' name='excel-direct.42203.832184282408' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42203.832184282408'>
+            <column datatype='integer' name='[Count Of Visitors (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='0' formula='[CountOfVisitors]' peg='0' size='7' />
+            </column>
+            <column caption='Count Of Visitors' datatype='integer' name='[CountOfVisitors]' role='measure' type='quantitative' />
+            <column-instance column='[CountOfVisitors]' derivation='Count' name='[cnt:CountOfVisitors:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Count Of Visitors (bin)]' derivation='None' name='[none:Count Of Visitors (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[excel-direct.42203.832184282408].[cnt:CountOfVisitors:qk]</rows>
+        <cols>[excel-direct.42203.832184282408].[none:Count Of Visitors (bin):qk]</cols>
+        <show-full-range>
+          <column>[excel-direct.42203.832184282408].[none:Count Of Visitors (bin):qk]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1998C8DD-1A9E-42EE-A5AD-F18A95A06D39}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
